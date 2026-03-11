@@ -8,7 +8,7 @@ const { globalRateLimiter } = require('./middleware/rateLimiter');
 const uploadRoutes = require('./routes/upload');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 
 // ── Security Middleware ─────────────────────────────────────────────────────
 app.use(helmet());
