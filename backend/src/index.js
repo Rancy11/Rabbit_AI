@@ -12,7 +12,6 @@ const PORT = process.env.PORT || 8080;
 
 // ── Security Middleware ─────────────────────────────────────────────────────
 app.use(helmet());
-const cors = require("cors");
 
 app.use(cors({
   origin: "*",
