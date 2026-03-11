@@ -12,10 +12,12 @@ const PORT = process.env.PORT || 8080;
 
 // ── Security Middleware ─────────────────────────────────────────────────────
 app.use(helmet());
+const cors = require("cors");
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'x-api-key'],
+  origin: "*",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type", "x-api-key"]
 }));
 app.use(express.json({ limit: '1mb' }));
 app.use(globalRateLimiter);
